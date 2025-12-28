@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cloud Service Node</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: "Segoe UI", sans-serif;
+        }
+
+        body {
+            margin: 0;
+            height: 100vh;
+            background: linear-gradient(135deg, #1d2671, #c33764);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(12px);
+            border-radius: 20px;
+            padding: 40px 50px;
+            width: 420px;
+            text-align: center;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+            animation: slideUp 0.8s ease-out;
+        }
+
+        h1 {
+            margin-top: 0;
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+        }
+
+        .hostname {
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin: 15px 0;
+            color: #ffd369;
+            word-break: break-all;
+        }
+
+        .metric {
+            background: rgba(0, 0, 0, 0.25);
+            border-radius: 12px;
+            padding: 15px;
+            margin-top: 15px;
+            font-size: 1.1rem;
+        }
+
+        footer {
+            margin-top: 25px;
+            font-size: 0.85rem;
+            color: #e0e0e0;
+            opacity: 0.8;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+        <h1>☁️ Cloud Application</h1>
+
+        <div>Request served by</div>
+        <div class="hostname">
+            <%= hostname %>
+        </div>
+
+        <div class="metric">
+            ⏱ Response Time: <strong>
+                <%= responseTime %> ms
+            </strong>
+        </div>
+
+        <footer>
+            Hybrid Load Balancing
+        </footer>
+    </div>
+
+</body>
+
+</html>

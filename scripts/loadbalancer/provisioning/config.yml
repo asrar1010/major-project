@@ -1,0 +1,15 @@
+prometheus:
+  url: http://ec2-13-234-33-79.ap-south-1.compute.amazonaws.com:9090/api/v1/query
+  scrape_interval: 1
+thresholds:
+  cpu_mem_diff_percent: 10
+servers:
+  vm1: ec2-52-66-212-146.ap-south-1.compute.amazonaws.com:5000
+  vm2: ec2-13-233-236-179.ap-south-1.compute.amazonaws.com:5000
+instances:
+  vm1: ec2-52-66-212-146.ap-south-1.compute.amazonaws.com:9100
+  vm2: ec2-13-233-236-179.ap-south-1.compute.amazonaws.com:9100
+nginx:
+  config_path: /etc/nginx/conf.d/backend.conf
+  access_log: /var/log/nginx/backend_access.log
+  error_log: /var/log/nginx/backend_error.log
