@@ -23,4 +23,8 @@ venv/bin/pip install -r requirements.txt
 sudo nohup venv/bin/python load_balancer.py \
   > output.log 2>&1 &
 
+# Run app using venv Python
+sudo nohup venv/bin/python capacity_alert_app.py \
+  > output.cap.log 2>&1 &
+
 echo "Load Balancer running"

@@ -38,7 +38,7 @@ def notify_recovery():
     """Called by load_balancer when servers recover."""
     if waiting_emails:
         for email in list(waiting_emails):
-            send_email(email, "Server is back online!", "At least one application server is healthy.")
+            send_email(email, "Server is back online!", "Our services are up and running now!!. Thanks for your patience")
         waiting_emails.clear()
 
 @app.route("/")
